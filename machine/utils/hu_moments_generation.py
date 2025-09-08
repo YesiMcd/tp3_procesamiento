@@ -6,7 +6,7 @@ import math
 import os
 
 # Carpeta donde están las imágenes de las piezas
-DATA_DIR = 'C:/Users/admin/Desktop/2025-2C/Procesamiento imagenes y señales/reconocimiento_piezasajedrez/machine/shapes'  # cada subcarpeta es una pieza.
+DATA_DIR = 'C:/Users/admin/Desktop/2025-2C/procesamiento/reconocimiento_piezasajedrez/machine/shapes'  # cada subcarpeta es una pieza.
 OUTPUT_FILE = './generated-files/chess-hu-moments.csv'
 
 # Escribe los valores de los momentos de Hu en el archivo

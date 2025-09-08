@@ -6,15 +6,18 @@ import sys
 import os
 
 # Añade la carpeta raíz del proyecto al path
-project_root = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(project_root)
+#project_root = os.path.dirname(os.path.abspath(__file__))
+#sys.path.append(project_root)
+
+# Añade la carpeta 'machines' al path para que Python encuentre 'utils'
+sys.path.append(os.path.join(os.path.dirname(__file__), "machine"))
 
 for p in sys.path:
     print(p)
 
 from machine.utils.contour import get_contours, filter_contours_by_area, get_bounding_rect
 from utils.frame_editor import apply_color_convertion, threshold, denoise, draw_contours
-from utils.trackbar import create_trackbar, get_trackbar_value
+from trackbar import create_trackbar, get_trackbar_value
 from ml_model import train_model
 from utils.label_converters import int_to_label
 

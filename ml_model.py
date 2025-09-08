@@ -40,9 +40,16 @@ def load_training_set():
     trainData = np.array(trainData, dtype=np.float32)
     trainLabels = np.array(trainLabels, dtype=np.int32)
 
+
+
 def train_model():
     load_training_set()
     tree = DecisionTreeClassifier(max_depth=10)
+    print("trainData:", trainData)
+    print("trainLabels:", trainLabels)
+    print("trainData shape:", getattr(trainData, 'shape', None))
+    print("trainLabels shape:", getattr(trainLabels, 'shape', None))
+
     tree.fit(trainData, trainLabels.ravel())
     return tree
 

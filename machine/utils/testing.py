@@ -2,12 +2,16 @@ import cv2
 import numpy as np
 import glob
 import os
+import sys
 
-from utils.uh_moments_generation import hu_moments_of_file
-from utils.label_converters import int_to_label
+sys.path.append(os.path.join(os.path.dirname(__file__), "machine"))
 
 
-def load_and_test(model, test_dir='C:/Users/admin/Desktop/2025-2C/Procesamiento imagenes y señales/reconocimiento_piezasajedrez/machine/shapes'):
+from machine.utils.hu_moments_generation import hu_moments_of_file
+from machine.utils.label_converters import int_to_label
+
+
+def load_and_test(model, test_dir='C:/Users/admin/Desktop/2025-2C/procesamiento/reconocimiento_piezasajedrez/machine/shapes'):
     """
     Prueba un modelo con imágenes de piezas de ajedrez.
     

@@ -1,6 +1,6 @@
 import csv
 import numpy as np
-from utils.label_converters import label_to_int
+from machine.utils.label_converters import label_to_int
 from sklearn.tree import DecisionTreeClassifier
 import os
 
