@@ -1,10 +1,12 @@
 import cv2
 import numpy as np
 import glob
-import os
-import sys
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "machine"))
+import sys
+import os
+
+# Agrega la carpeta raíz al path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 
 from machine.utils.hu_moments_generation import hu_moments_of_file

@@ -48,9 +48,9 @@ def main():
     model = train_model()
 
     # Trackbars para parámetros en tiempo real
-    create_trackbar('Threshold', window_name, 255)
+    create_trackbar('Threshold', window_name, 270)
     create_trackbar('Min Area', window_name, 100)
-    create_trackbar('Max Area', window_name, 5000)
+    create_trackbar('Max Area', window_name, 9000)
 
     while True:
         ret, frame = cap.read()
